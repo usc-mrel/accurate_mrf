@@ -2,7 +2,7 @@
 Figure generation for manuscript "Towards accurate MRF T2 in structured material at 0.55 T using MT-suppressed excitations", Zhibo Zhu, Krishna S. Nayak.
 
 # External dependencies:
-* *ihMT_steadystate*: Included, see https://github.com/mriphysics/ihMT_steadystate/tree/master for details.
+* *ihMT_steadystate*: Included, see https://github.com/mriphysics/ihMT_steadystate for details.
 * *tight_subplot*: Included.
 
 # Installation:
