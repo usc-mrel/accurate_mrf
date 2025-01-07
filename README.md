@@ -1,9 +1,10 @@
 # accurate_mrf
-Figure generation for manuscript "Towards accurate MRF T2 in structured material at 0.55 T using MT-suppressed excitations", Zhibo Zhu, Krishna S. Nayak.
+Figure generation for manuscript "Towards accurate MRF T2 in structured material at 0.55 T using MT-suppressed excitations", Zhibo Zhu, Nam G. Lee, Krishna S. Nayak.
 
 # External dependencies:
 * *ihMT_steadystate*: Included, see https://github.com/mriphysics/ihMT_steadystate for details.
 * *tight_subplot*: Included.
+* For image reconstruction, see https://github.com/usc-mrel/efficient_mrf for details.
 
 # Installation:
 * Download this repository.
