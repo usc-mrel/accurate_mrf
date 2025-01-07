@@ -5,8 +5,8 @@ addpath('../external/tight_subplot');
 folder_name = {'pulseq_mrf_20241031', 'pulseq_mrf_20241106', 'pulseq_mrf_20241108_scan1', 'pulseq_mrf_20241108_scan2'};
 load('../T1cm.mat');
 load('../T2cm.mat');
-xrange = 56:245;
-yrange = 46:235;
+xrange = 66:245;
+yrange = 61:230;
 slice_loc = [2 4 1 2];
 
 f1 = figure('Position', [475 450 500 450], 'Color', 'k', 'InvertHardcopy', 'off');

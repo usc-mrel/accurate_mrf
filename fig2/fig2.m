@@ -14,18 +14,18 @@ s1 = rf_ex.signal;
 f1 = fftshift(fft(s1, 10 * length(s1))) * T * 360;
 figure('Color', 'w', 'InvertHardcopy', 'off');
 yyaxis left;
-plot(linspace(-fmax, fmax, length(f1)), abs(f1), 'LineWidth', 1.5);
+plot(linspace(-fmax, fmax, length(f1)), abs(f1), 'LineWidth', 1.5, 'LineStyle', '-', 'Color', [0 0.4470 0.7410]);
 xlim([-3500 3500]);
 hold on;
 
 load('rf_hard.mat');
 s2 = rf_ex.signal(1) * ones(size(t));
 f2 = fftshift(fft(s2, 10 * length(s2))) * T * 360;
-plot(linspace(-fmax, fmax, length(f2)), abs(f2), 'LineWidth', 1.5);
+plot(linspace(-fmax, fmax, length(f2)), abs(f2), 'LineWidth', 1.5, 'LineStyle', '-', 'Color', [0.8500 0.3250 0.0980]);
 
 s3 = s2 / 2;
 f3 = fftshift(fft(s3, 10 * length(s3))) * T * 2 * 360;
-plot(linspace(-fmax/2, fmax/2, length(f3)), abs(f3), 'LineWidth', 1.5);
+plot(linspace(-fmax/2, fmax/2, length(f3)), abs(f3), 'LineWidth', 1.5, 'LineStyle', '-', 'Color', [0.9290 0.6940 0.1250]);
 
 xlabel('Frequency [Hz]', 'FontSize', 14);
 ylabel('FA [°]', 'FontSize', 14);

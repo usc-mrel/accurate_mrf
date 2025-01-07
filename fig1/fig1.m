@@ -19,8 +19,8 @@ plot(ky_GIRF(:, 1), kx_GIRF(:, 1), 'LineWidth', 1.5);
 axis image;
 xlim([-0.5 0.5]);
 ylim([-0.5 0.5]);
-xlabel('Normalized k_y');
-ylabel('Normalized k_z');
+xlabel('Normalized k_x');
+ylabel('Normalized k_y');
 set(gca, 'FontSize', 14);
 
 saveas(gcf, 'fig1.png');
