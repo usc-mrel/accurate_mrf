@@ -10,7 +10,7 @@ Figure generation for manuscript "Towards accurate MRF T2 in structured material
 * Run MATLAB script in each subfolder *fig*.
 
 # Folder organization:
-* *fig1* to *figure5*, *fig_supp*: Figure generation codes.
+* *fig1* to *fig5*, *fig_supp*: Figure generation codes.
 * *external*: External codes and scripts.
 * *data*: MRF parametric maps and reference SESE dicom images from 3 healthy volunteers.
 
