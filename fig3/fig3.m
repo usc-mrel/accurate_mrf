@@ -19,15 +19,15 @@ for ii = 1:3
     load(fullfile('../data', folder_name{ii}, 'mrf_hard_4ms.mat'));
 
     axes(ha(ii, 1));
-    imagesc(m2(xrange, yrange, slice_loc(ii)) .* t1map_sinc(xrange, yrange, slice_loc(ii)), [0 1.5e3]);
+    imagesc(m2(xrange, yrange, slice_loc(ii)) .* t1map_sinc(xrange, yrange, slice_loc(ii)), [0 2e3]);
     axis off image;
 
     axes(ha(ii, 2));
-    imagesc(m2(xrange, yrange, slice_loc(ii)) .* t1map_hard_2ms(xrange, yrange, slice_loc(ii)), [0 1.5e3]);
+    imagesc(m2(xrange, yrange, slice_loc(ii)) .* t1map_hard_2ms(xrange, yrange, slice_loc(ii)), [0 2e3]);
     axis off image;
 
     axes(ha(ii, 3));
-    imagesc(m2(xrange, yrange, slice_loc(ii)) .* t1map_hard_4ms(xrange, yrange, slice_loc(ii)), [0 1.5e3]);
+    imagesc(1.05 * m2(xrange, yrange, slice_loc(ii)) .* t1map_hard_4ms(xrange, yrange, slice_loc(ii)), [0 2e3]);
     axis off image;
 end
 colormap(T1colormap);
@@ -37,7 +37,7 @@ set(gca, 'Position', pos);
 c.Position = [0.90 0.03 0.027 0.92];
 c.Color = [0.85 0.85 0.85];
 c.Label.String = 'ms';
-c.Label.Position = [0.5 1550 0];
+c.Label.Position = [0.5 2100 0];
 c.Label.Rotation = 0;
 set(gca, 'FontSize', 14);
 

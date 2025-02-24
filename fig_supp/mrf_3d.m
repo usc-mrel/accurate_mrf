@@ -41,18 +41,18 @@ for ii = 1:3
         set(gca, 'Position', pos);
 
         axes(ha(2, 1));
-        imagesc(mask_sinc(xrange, yrange, nr_slice) .* t1map_sinc(xrange, yrange, nr_slice), [0 1.5e3]);
+        imagesc(mask_sinc(xrange, yrange, nr_slice) .* t1map_sinc(xrange, yrange, nr_slice), [0 2e3]);
         axis off image;
         colormap(gca, T1colormap);
         text(-10, 95, 'T_1', 'Color', [255 204 0] / 255, 'Rotation', 90, 'FontSize', 14, 'FontWeight', 'bold', 'FontName', 'Helvetica');
 
         axes(ha(2, 2));
-        imagesc(mask_hard_2ms(xrange, yrange, nr_slice) .* t1map_hard_2ms(xrange, yrange, nr_slice), [0 1.5e3]);
+        imagesc(mask_hard_2ms(xrange, yrange, nr_slice) .* t1map_hard_2ms(xrange, yrange, nr_slice), [0 2e3]);
         axis off image;
         colormap(gca, T1colormap);
 
         axes(ha(2, 3));
-        imagesc(mask_hard_4ms(xrange, yrange, nr_slice) .* t1map_hard_4ms(xrange, yrange, nr_slice), [0 1.5e3]);
+        imagesc(mask_hard_4ms(xrange, yrange, nr_slice) .* t1map_hard_4ms(xrange, yrange, nr_slice), [0 2e3]);
         axis off image;
         colormap(gca, T1colormap);
         pos = get(gca, 'Position');
