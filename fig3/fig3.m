@@ -27,7 +27,7 @@ for ii = 1:3
     axis off image;
 
     axes(ha(ii, 3));
-    imagesc(1.05 * m2(xrange, yrange, slice_loc(ii)) .* t1map_hard_4ms(xrange, yrange, slice_loc(ii)), [0 2e3]);
+    imagesc(m2(xrange, yrange, slice_loc(ii)) .* t1map_hard_4ms(xrange, yrange, slice_loc(ii)), [0 2e3]);
     axis off image;
 end
 colormap(T1colormap);
