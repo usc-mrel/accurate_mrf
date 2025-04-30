@@ -5,6 +5,7 @@ gam = 42.58e6; % Hz / T
 
 fsample = linspace(-1e4, 1e4, 1e4);
 [Gb, ~] = SuperLorentzian_lineshape(18e-6, fsample, 'interpzero');
+[Gw, ~] = SuperLorentzian_lineshape(90e-3, fsample);
 
 load('rf_ex.mat');
 t = rf_ex.t;
@@ -33,12 +34,14 @@ ylabel('FA [°]', 'FontSize', 14);
 hold off;
 yyaxis right;
 semilogy(fsample, abs(Gb), 'Color', 'k', 'LineStyle', '--', 'LineWidth', 3);
-ylim([1e-5 1e-4]);
+hold on;
+semilogy(fsample, abs(Gw), 'Color', 'k', 'LineStyle', '-', 'LineWidth', 1.5);
+ylim([1e-5 0.025]);
 ylabel('Absorption lineshape [sec]', 'FontSize', 14);
 
 ax = gca;
 ax.YAxis(2).Color = 'k';
-legend('Sinc, T_{RF}=2 ms', 'Hard, T_{RF}=2 ms', 'Hard, T_{RF}=4 ms');
+legend('Sinc, T_{RF}=2 ms', 'Hard, T_{RF}=2 ms', 'Hard, T_{RF}=4 ms', 'Bound pool', 'Free water');
 title('Excitation profile', 'FontSize', 14);
 
 saveas(gcf, 'fig2.png');
